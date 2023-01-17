@@ -1,0 +1,13 @@
+ul.no-bullets {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */
+}
+.footer{
+    padding:2rem;
+    font-size: small;
+    color:rgb(154, 62, 240)
+}

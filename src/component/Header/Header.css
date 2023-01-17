@@ -1,0 +1,95 @@
+.header{
+    background-color:rgb(231, 217, 250);
+    /* background-image: url(../../touristplacesimg/images.jpeg); */
+    background-repeat: no-repeat;
+    color:black;
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+.headerContainer{
+    width:100%;
+    max-width: 1034px;
+    margin: 20px 0px 50px 0px;
+    align-items: center;
+}
+.headerContainer.listMode{
+    margin: 20px 0px 0px 0px;
+}
+.headerlist{
+    display: flex;
+    gap:40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.headerlistitem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}  
+.headerlistitem.active{
+    border: 2px solid rgb(199, 139, 245);
+    padding :5px;
+    border-radius: 20px;
+    background-color:rgb(199, 139, 245) ;
+
+}
+.discount{
+    padding:4px;
+    transform: rotate(-40deg);
+    background-image: linear-gradient(to right, #c699f7,rgb(231, 217, 250));
+    /* transform: skew(45 deg, 70 deg); */
+    
+}
+.headerdesc{
+    margin-left: 20px;
+}
+.headerSearch{
+    position: absolute;
+    background-color: rgb(247, 239, 246);
+    border:3px solid #8c68ce;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 0px;
+    bottom:-30px;
+    left: 7rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1024px;
+
+}
+.headerSearchitems{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.headersearchinput{
+    border: none;
+    border-radius: 20px;
+    padding-left: 7px;
+}
+.headersearchtext {
+    color:black
+}
+.date{
+    position: absolute;
+    top: 40px;
+    left:17rem;
+    z-index: 1;
+}
+
+.guest{
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+}
+#dropdown-basic
+{
+    height: 20px;
+    padding: 0px 0px 0px 0px;
+    width:20px;
+    border-radius: 3px;
+    color:rgb(201, 146, 240);
+    background-color: #8c68ce;
+}

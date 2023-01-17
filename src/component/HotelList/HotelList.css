@@ -1,0 +1,94 @@
+.hotelListContainer{
+    margin-right: 2rem;
+
+}
+.hotelListItem{
+    /* background-image: linear-gradient(to right, #d0d0d0, #efecf1, #d4d4d4); */
+    height:14rem;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 1rem;
+    border:solid rgb(209, 208, 210);
+    /* border-radius: 10px; */
+    border-width: 1px;
+    padding: 15px;
+    box-shadow: 4px 3px 8px 1px #c3c1c4;
+    -webkit-box-shadow: 4px 3px 8px 1px #c3c1c4;
+    transition: transform .2s;
+}
+.hotelListItem:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 3px 8px 1px #d49bf4;
+        -webkit-box-shadow: 4px 3px 8px 1px #d49bf4;
+    
+}
+.hotelListImg{
+    border-radius: 5px;
+    flex:1;
+    width:100%;
+    height:100%;
+}
+
+.hotelListDisc{
+    flex:2;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: column;
+}
+.hotelListDisc .title{
+    font-size:x-large;
+    color: #3a0c56;
+    font-weight: 600;
+}
+.hotelDescription{
+    border-left:solid grey;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.hotelDescription .onbookingcancelation{
+    background-color: rgb(214, 247, 214);
+    color:green;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.hotelListPrice{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height:100%;
+}
+.hotelListPrice .review{
+    background-color: #3a0c56;
+    color: #c3c1c4;
+    padding: 2px;
+    border-radius: 5px;   
+}
+.hotelprice{
+    font-weight: 600;
+    color: black;
+    /* margin-bottom: 0px; */
+}
+.pricecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+button{
+    border: none;
+    color: aliceblue;
+    background-color: #3a0c56;
+    border-radius: 5px;
+    transition: transform .2s;
+
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+

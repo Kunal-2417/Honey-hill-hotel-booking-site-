@@ -1,0 +1,36 @@
+.SearchFeature{
+    margin-top: 20px;
+     
+    height: auto;
+
+}
+.Searchcontainer{
+    margin-top:5rem;
+    background-color: rgb(174, 112, 233);
+    /* width: 100%; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction:column;
+    padding-top:2rem;
+    padding-bottom: 2rem;
+}
+.bar{
+    /* height: 40px; */
+    border-radius: 10px;
+    border: none;
+}
+.Searchitem{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.heading{
+    padding: 0px;
+    font-size:1.5rem;
+    color: azure;
+}
+.desc {
+    font-size: 1rem;
+    color: azure;
+}

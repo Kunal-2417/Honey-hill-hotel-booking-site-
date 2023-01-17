@@ -1,0 +1,19 @@
+body{
+    display: block;
+    
+}
+.home{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+
+}
+.homeContainer{
+    height: 25rem;
+    overflow:auto;
+    /* margin-bottom: 350px; */
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 30px;
+}

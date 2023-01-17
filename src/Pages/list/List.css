@@ -1,0 +1,80 @@
+.listContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.listitems{
+    width:100%;
+    display: flex;
+    gap: 20px;
+}
+.listSearch{
+    height:fit-content;
+    flex:1;
+    background-color: rgb(193, 137, 246);
+    margin-left: 5rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    position:sticky;
+    top:10px;
+    
+}
+.searchTitle{
+    font-size: x-large;
+    color: aliceblue;
+    /* text-align: center; */
+}
+.searchItem{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.searchItem>label{
+    font-size: larger;
+    color: aliceblue;
+}
+.searchItem>input {
+    height:2rem;
+    border:none;
+    padding:3px;
+    border-radius: 5px;
+}
+.searchItem>span {
+    height: 2rem;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+    align-items: center;
+    background-color: aliceblue;
+}
+.optioncontainer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.optionitems{
+    color: rgb(54, 52, 52);
+    display: flex;
+
+    margin-bottom: 1rem;
+    font-size: small;
+    justify-content: space-between;
+
+}
+
+.optionitems>input{
+    width: 30%;
+}
+
+.listSearch>button{
+    border: none;
+    color: rgb(157, 22, 247);
+    background-color: rgb(233, 196, 245);
+    border-radius: 2px;
+    width: 70%;
+    margin-left: 2.2rem;
+}
+.listResult{
+    flex:3;
+}

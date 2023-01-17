@@ -1,0 +1,134 @@
+.hotelContainer{
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color:black;
+    box-shadow: 4px 3px 8px 1px #b4b4b4;
+        -webkit-box-shadow: 4px 3px 8px 1px#b4b4b4;
+}
+.hotelName{
+    display: flex;
+    /* padding-left: 1rem; */
+    background-color: rgb(255, 255, 255);
+
+}
+.heading
+{
+    flex:3;
+}
+.bookingButton{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top:2.2rem;
+    background-color: #f1e8f6;
+}
+
+.hotelTitle{
+    padding-left: 1rem;
+    /* background-color: #b4b4b4; */
+    width:100%;
+    color:rgb(36, 5, 64);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.hotelLocation{
+    padding-left: 1rem;
+    color:black;
+    font-size: large;
+    font-weight: 200;
+}
+.hotelImg {
+    
+    width: 100%;
+    height: 100%;
+}
+.Image{
+    position: relative;
+}
+
+
+.hotelItem{
+    display: flex;
+}
+.hotelDescription{
+    flex:3;
+
+}
+.hotelListPrice{
+
+    flex:1;
+    /* padding: 1rem; */
+    /* background-color: #e4e0f7; */
+    /* margin: 1rem; */
+    position: relative;
+}
+.hotelMoney{
+    padding:1rem;
+    background-color: #e4e0f7;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.hotelListPrice .review {
+    /* margin-top:2rem; */
+    background-color: #3a0c56;
+    color: #c3c1c4;
+    padding: 2px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Besttym{
+    width: auto;
+    height: 2rem;
+    font-size:small;
+    
+    position: absolute;
+    /* margin-left: 1px; */
+    color: aliceblue;
+    left:0px;
+    font-weight: 900;
+    top:0px;
+    background-color: rgb(44, 6, 67);
+    padding: 0.4rem;
+}
+
+
+.hotelprice {
+    font-weight: 600;
+    color: black;
+    /* margin-bottom: 0px; */
+}
+
+.pricecontainer {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    margin-top: 50px;
+}
+
+button {
+    border: none;
+    color: aliceblue;
+    background-color: #3a0c56;
+    border-radius: 5px;
+    transition: transform .2s;
+
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+.moreFacilities{
+    padding: .4rem;
+}
+.FacilitiesTitle{
+    font-size: x-large;
+}
+.Icon{
+ margin-left: 1rem;
+ color:green;
+}
