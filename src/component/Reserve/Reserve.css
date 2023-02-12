@@ -1,0 +1,51 @@
+.reserve{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.406);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rcontainer{
+    background-color: #efdff6;
+    padding:5rem;
+    top:1rem;
+    margin-bottom: 3rem;
+    width:50%;
+    height:80%;
+    position: relative;
+    overflow-y: scroll;
+    font-weight: bolder;
+}
+.rClose{
+    position: absolute;
+    top: 2rem;
+    right: 10rem;
+    color: #efdff6;
+    cursor: pointer;
+    font-size: xx-large;
+}
+.rItem{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap:2rem;
+}
+.rInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.rSelectRooms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgb(39, 41, 43);
+}
+.room{
+    display: flex;
+    flex-direction: column;
+}

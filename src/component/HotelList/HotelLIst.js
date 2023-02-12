@@ -3,32 +3,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import useFetch from '../../hook/usefetch'
 import "./HotelList.css"
-function HotelLIst({destination}) {
+function HotelLIst({destination,item}) {
+    const { data, loading, error } = useFetch("/hotel/get?featured=true&max=500&min=1");
+
 
 
 const navigate = useNavigate();     //Navigate hook
 const openhoteldec = () => {
-    navigate("/hotel");
+    const ID=item._id;
+    navigate("/hotel",{state:{ID}});
 }
 
     console.log({destination})
   return (
     <div>
       <div className="hotelListContainer">
+        {(<>
+        {/* {loading ? ("Loading Plz wait"):(<> {data.map(items=>( */}
+
         <div className="hotelListItem">
             <div className="hotelListImg">
             <img className='hotelListImg' src={require("../../propertieslistimg/hotel.png")} alt="" />
             </div>
             <div className="hotelListDisc">
                 <div className="title">
-                    Hotel Tara Valley view
+                    {item.name}{/* Hotel Tara Valley view */}
                 </div>
                 <div className="hotellocation">
-                    {destination}
+                    {item.city}
                 </div>
                 <div className="hotelDescription">
-                    Delux Double room(2 Adult + 1 Child) 
+                    {item.desc}  {/* Delux Double room(2 Adult + 1 Child)  */}
                     <br />
                     <small>1 extra-large duolbe bed</small>
                     <div className="onbookingcancelation">
@@ -41,14 +48,14 @@ const openhoteldec = () => {
             </div>
             <div className="hotelListPrice">
                 <div className="review">
-                    8.7
+                    {item.rating}
                 </div>
                 <small>45 reviews</small>
                 <div className="pricecontainer">
                     <div className="hotelprice">
-                        Rs.18700 <small>per day</small>
+                        {item.cheapestPrice} <small>per day</small>
                     </div>
-                    <small>+ Rs.700 taxesand charges</small>
+                    <small>+ Rs.150 taxesand charges</small>
                     <button onClick={openhoteldec}>
                         See Availability <FontAwesomeIcon icon={faArrowCircleRight}/>
                     </button>
@@ -56,6 +63,8 @@ const openhoteldec = () => {
             </div>
 
         </div>
+        {/* )) } */}
+        </>)}
       </div>
     </div>
   )

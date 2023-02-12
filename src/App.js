@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import List from './Pages/list/List.js';
 import Hotel from './Pages/hotel/Hotel.js';
+import Login from './Pages/login/login';
+import Register from './Pages/register/Register';
+import Reserve from './component/Reserve/Reserve';
 
 function App() {
   return (
@@ -15,7 +18,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/list" element={<List />} />
         <Route path="/hotel" element={<Hotel />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/reserve" element={<Reserve/>}/>
 
       </Routes>
     </Router>

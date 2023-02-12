@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Navbar.css"
+import { AuthContext } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 function Navbar() {
+    const navigate=useNavigate();
+    const { user,dispatch} = useContext(AuthContext)
+
+    const logout=()=>{
+        dispatch({ type: "LOGOUT" })
+
+    }
+    const loginpage=()=>{
+        navigate("/login")
+    }
+    const registerpage=()=>{
+        navigate("/register")
+    }
+
     return (
         <div>
-            <nav className="navbar navbar-expand-lg shadow-5-strong ftco_navbar ftco-navbar-light" id="ftco-navbar">
+            {<><nav className="navbar navbar-expand-lg shadow-5-strong ftco_navbar ftco-navbar-light" id="ftco-navbar">
                 <div className="container">
                     <a className="navbar-brand" href="index.html">Honey Hills</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -24,14 +41,22 @@ function Navbar() {
                             <li className="nav-item active"><a href="/" className="nav-link">Home</a></li>
                             <li className="nav-item"><a href="/" className="nav-link">About</a></li>
                             <li className="nav-item"><a href="/" className="nav-link">Contact</a></li>
-                            <li className='nav-item my-2 mx-2'><button className="btn my-2 mb-3 mr-3 btn-deep-orange">Login</button></li>
-                            <li className='nav-item my-2 mx-2'><button className="btn my-2 mb-3 mr-3 btn-deep-orange">Register</button></li>
-
-
                         </ul>
                     </div>
+                    {!user &&(<div className="collapse navbar-collapse" id="ftco-nav navbar navbarSupportedContent">
+                        <ul className="navbar-nav ml-auto mr-md-3">
+                            <li className='nav-item my-2 mx-2' onClick={loginpage}><button className="btn my-2 mb-3 mr-3 btn-deep-orange">Login</button></li>
+                            <li className='nav-item my-2 mx-2'onClick={registerpage}><button className="btn my-2 mb-3 mr-3 btn-deep-orange">Register</button></li>
+                        </ul>
+                    </div>)}
+                    {user && (<div className="collapse navbar-collapse" id="ftco-nav navbar navbarSupportedContent">
+                        <ul className="navbar-nav ml-auto mr-md-3">
+                            <li className='nav-item my-2 mx-2'onClick={logout}><button className="btn my-2 mb-3 mr-3 btn-deep-orange">LogOut</button></li>
+                        </ul>
+                    </div>)}
+
                 </div>
-            </nav>
+            </nav></>}
             
         </div>
     )

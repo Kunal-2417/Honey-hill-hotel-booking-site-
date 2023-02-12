@@ -5,12 +5,14 @@ import Header from "../../component/Header/Header"
 import Navbar from "../../component/Navbar/Navbar"
 import PropertiesList from "../../component/propertieslist/PropertiesList"
 import SearchFeature from "../../component/searchfeature/SearchFeature"
+import Login from "../login/login"
 import "./Home.css"
 
 export default function Home() {
   return (
     <>
     <div>
+      {/* <Login/> */}
       <Navbar/>
       <Header/>
       <div className="home">

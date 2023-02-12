@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.css'
 import "../Navbar/Navbar.css"
 import 'react-date-range/dist/styles.css'; // main css file
@@ -12,12 +12,17 @@ import { faBed, faCalendarDays, faCar, faCarriageBaby, faLocationPin, faPeopleGr
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { SearchContext } from '../../context/Searchcontext';
+import { AuthContext } from '../../context/AuthContext';
+
+
 
 
 
 console.log("kunal");
 const Header = ({ type }) => {
 
+  const { user } = useContext(AuthContext)
 
 
 
@@ -50,6 +55,8 @@ const Header = ({ type }) => {
     }
   }
 
+
+  const {dispatch} = useContext(SearchContext)
 // let goingplace=document.getElementById('destination');
 // setDestination(goingplace.value);
 // console.log(destination.place);
@@ -73,11 +80,13 @@ const Header = ({ type }) => {
   }
    const navigate=useNavigate();     //Navigate hook
   const handleSearch=()=>{
-
+    dispatch({ type:"NEW_SEARCH",payload:{destination,date,option}})
     navigate("/list",{state:{date,destination,option}})
   }
   
-
+const loginpage=()=>{
+  navigate("/login")
+}
 
 
 
@@ -96,7 +105,7 @@ const Header = ({ type }) => {
               <FontAwesomeIcon icon={faBed} />
               <span>Stay</span>
             </div>
-            <div className="headerlistitem">
+            {/* <div className="headerlistitem">
               <FontAwesomeIcon icon={faPlane} />
               <span>Flight</span>
             </div>
@@ -111,15 +120,18 @@ const Header = ({ type }) => {
             <div className="headerlistitem">
               <FontAwesomeIcon icon={faTaxi} />
               <span>Airport taxis</span>
-            </div>
+            </div> */}
 
           </div>
           <div className="headerheading">
             {type!=="List" &&
               <>
                 <h1>Hurry up! Grab upto <span className="discount">50% discount</span> </h1>
+                {!user&&(<div>
+
                 <h4 className="headerdesc">Redeem special offer just by login</h4>
-                <button className="btn my-2 mb-3 mr-3 btn-purple">Login/Register</button>
+                <button className="btn my-2 mb-3 mr-3 btn-purple" onClick={loginpage}>Login/Register</button>
+                </div>)}
                 <div className="headerSearch">
                   <div className="headerSearchitems">
                     <FontAwesomeIcon icon={faLocationPin} className="headericon" />

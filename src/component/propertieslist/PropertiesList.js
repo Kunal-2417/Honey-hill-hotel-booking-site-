@@ -1,152 +1,43 @@
 import React from 'react'
+import useFetch from '../../hook/usefetch.js'
 
 function PropertiesList() {
+    const { data, loading, error } = useFetch("/hotel/countByType");
+    console.log(data);
+    const images=[
+        require('../../propertieslistimg/hotel.png'),
+        require('../../propertieslistimg/resort.png'),
+        require('../../propertieslistimg/tiny.png'),
+        require('../../propertieslistimg/stupa.png')
+    ]
   return (
     <div>
-          <div className="proterties">
+          {loading ? ("Loading Plz wait") : (<>   <div className="proterties">
               <div className="container">
                   <span className='Title'>Browse by property type
-                  <ul className="cards">
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Hotel
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Capital of himachal
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../propertieslistimg/hotel.png')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Resort
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Himalayan skiing & treking
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../propertieslistimg/resort.png')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Tiny House
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Dalai lama's home
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../propertieslistimg/tiny.png')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Stupa Guest house
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          North india railway jnc.
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../propertieslistimg/stupa.png')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Dalhousie
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Colonial-era churches
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../touristplacesimg/Dalhousie.jpeg')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Chail
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Trekking point
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../touristplacesimg/Chail.jpeg')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Kasol
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Honeymoon & backpacking
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../touristplacesimg/Kasol.jpeg')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Spiti Valley
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Cold desert mountain valley
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../touristplacesimg/Spiti.jpeg')} alt="" />
-                              </div>
-                          </div>
-                      </li>
-                      <li className="card">
-                          <div>
-                              <div className="card-content">
-                                  <div className="cardTitle">
-                                      <div className="featureTitle">
-                                          Kufri
-                                      </div>
-                                      <div className="featureTitledecs">
-                                          Zoo,yak and equestrain
-                                      </div>
-                                  </div>
-                                  <img className="featureimg" src={require('../../touristplacesimg/Kufri.jpeg')} alt="" />
-                              </div>
-                          </div>
-                      </li>
 
+                 <ul className="cards">
+                  {data &&images.map((img,i)=>(
+                      <li className="card" key={i}>
+                          <div>
+                              <div className="card-content">
+                                  <div className="cardTitle">
+                                      <div className="featureTitle">
+                                         {data[i]?.type}
+                                      </div>
+                                      <div className="featureTitledecs">
+                                          {data[i]?.count}   {data[i]?.type}s
+                                      </div>
+                                  </div>
+                                  <img className="featureimg" src={img} alt="" />
+                              </div>
+                          </div>
+                      </li>                                           
+                  ))}
                   </ul>
                   </span>
               </div>
-          </div>
+          </div></>)}
     </div>
   )
 }

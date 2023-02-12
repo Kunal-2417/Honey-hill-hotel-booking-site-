@@ -4,8 +4,8 @@ import "./Footer.css"
 function Footer() {
     return (
         <div>
-            <div class="footer d-flex justify-content-around">
-                <div class="p-2">
+            <div className="footer d-flex justify-content-around">
+                <div className="p-2">
 
                     <ul className="no-bullets">
                         <li>Countries</li>
@@ -16,7 +16,7 @@ function Footer() {
                         <li>Hotel</li>
                     </ul>
                 </div>
-                <div class="p-2"> <ul className="no-bullets">
+                <div className="p-2"> <ul className="no-bullets">
                     <li>Homes</li>
                     <li>Apartments</li>
                     <li>Resorts</li>
@@ -24,7 +24,7 @@ function Footer() {
                     <li>Hostels</li>
                     <li>Guest House</li>
                 </ul></div>
-                <div class="p-2"> <ul className="no-bullets">
+                <div className="p-2"> <ul className="no-bullets">
                     <li>Unique place to stay</li>
                     <li>All destination</li>
                     <li>Rivews</li>
@@ -32,13 +32,13 @@ function Footer() {
                     <li>Seasonal and holiday deals</li>
                     <li>Discover</li>
                 </ul></div>
-                <div class="p-2"> <ul className="no-bullets">
+                <div className="p-2"> <ul className="no-bullets">
                     <li>Car hire</li>
                     <li>Bike rental</li>
                     <li>Cafe reservation</li>
                     <li>Travel agents</li>
                 </ul></div>
-                <div class="p-2"> <ul className="no-bullets">
+                <div className="p-2"> <ul className="no-bullets">
                     <li>About HoneyHill</li>
                     <li>Safety resouces centre</li>
                     <li>Terms & conditions</li>
