@@ -8,7 +8,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from 'date-fns';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed, faCalendarDays, faCar, faCarriageBaby, faLocationPin, faPeopleGroup, faPlane, faRestroom, faTaxi, faTrain, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faCalendarDays,  faCarriageBaby, faLocationPin, faPeopleGroup,  faRestroom,  faUser } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';

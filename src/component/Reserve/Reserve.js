@@ -34,7 +34,7 @@ function Reserve({ setOpen, hotelId }) {
     return !isFound
   }
 
-  const { data, loading, error } = useFetch(`/hotel/room/${hotelId}`)
+  const { data} = useFetch(`/hotel/room/${hotelId}`)
   // console.log(data);
   const fix = () => {
     setOpen(false);

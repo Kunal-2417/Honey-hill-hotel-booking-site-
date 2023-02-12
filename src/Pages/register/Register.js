@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./Register.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBCol, MDBRow, MDBBtn, MDBInput } from 'mdb-react-ui-kit';
 import { faF, faG, faL, } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,7 @@ function Register() {
         username: undefined,
         password: undefined
     })
-    const { user, loading, error, dispatch } = useContext(AuthContext)
+    const { user, loading, error } = useContext(AuthContext)
     const navigate = useNavigate();
     const handlechange = (e) => {
         setUserData(prev => ({ ...prev, [e.target.id]: e.target.value }))
@@ -22,7 +22,7 @@ function Register() {
     const handlelogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("/auth/register", userData)
+            await axios.post("/auth/register", userData)
             // dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
 
             navigate("/");

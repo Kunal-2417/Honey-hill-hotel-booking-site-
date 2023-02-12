@@ -3,7 +3,7 @@ import useFetch from '../../hook/usefetch.js'
 import "./Feature.css"
 function Feature() {
 
-  const { data, loading, error } = useFetch("/hotel/countByCity?cities=shimla,Paonta Sahib,Dharamshala");
+  const { data, loading } = useFetch("/hotel/countByCity?cities=shimla,Paonta Sahib,Dharamshala");
   console.log(data);
   return (
     <section>

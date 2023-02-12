@@ -2,11 +2,11 @@ import {faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useFetch from '../../hook/usefetch'
 import "./HotelList.css"
 function HotelLIst({destination,item}) {
-    const { data, loading, error } = useFetch("/hotel/get?featured=true&max=500&min=1");
+    // const { data, loading, error } = useFetch("/hotel/get?featured=true&max=500&min=1");
 
 
 

@@ -19,8 +19,7 @@ function Hotel() {
   const location = useLocation();   //Location hook
   const ID=location.state.ID
   const navigate=useNavigate();
-  const { data, loading, error } = useFetch(`/hotel/get/${location.state.ID}`);
-  const [open, setOpen] = useState(false)
+  const { data} = useFetch(`/hotel/get/${location.state.ID}`);
   const [openModel, setOpenModel] = useState(false)
   
   

@@ -2,7 +2,7 @@ import React from 'react'
 import useFetch from '../../hook/usefetch.js'
 
 function PropertiesList() {
-    const { data, loading, error } = useFetch("/hotel/countByType");
+    const { data, loading} = useFetch("/hotel/countByType");
     console.log(data);
     const images=[
         require('../../propertieslistimg/hotel.png'),

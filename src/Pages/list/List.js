@@ -14,7 +14,7 @@ import { SearchContext } from '../../context/Searchcontext';
 
 import "./List.css"
 import useFetch from '../../hook/usefetch'
-import refetch from '../../hook/usefetch'
+// import refetch from '../../hook/usefetch'
 import HotelLIst from '../../component/HotelList/HotelLIst'
 import SearchFeature from '../../component/searchfeature/SearchFeature'
 function List() {
@@ -26,10 +26,10 @@ function List() {
   
   const [date, setDate] = useState(location.state.date)
   const [destination, setDestination] = useState(location.state.destination)
-  const [option, setOption] = useState(location.state.option)
+  const [option] = useState(location.state.option)
   const [openDate, setOpenDate] = useState(false)
-  const [min, setMin] = useState(0)
-  const [max, setMax] = useState(1000)
+  const [min] = useState(0)
+  const [max] = useState(1000)
 
   
   

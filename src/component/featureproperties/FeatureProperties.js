@@ -3,7 +3,7 @@ import "./FeatureProperties.css"
 import useFetch from '../../hook/usefetch.js'
 
 function FeatureProperties() {
-  const { data, loading, error } = useFetch("/hotel/pricelist");
+  const { data, loading } = useFetch("/hotel/pricelist");
   console.log(data);
   return (
     <section>
