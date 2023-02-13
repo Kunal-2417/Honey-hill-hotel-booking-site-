@@ -5,7 +5,7 @@ import "./login.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { MDBContainer, MDBCol, MDBRow, MDBBtn,  MDBInput } from 'mdb-react-ui-kit';
-import { faF, faG, faL,  } from '@fortawesome/free-solid-svg-icons';
+// import { faF, faG, faL,  } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
