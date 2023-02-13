@@ -50,14 +50,14 @@ function Login() {
                         <p className="lead fw-normal mb-0 me-3">Sign in with</p>
 
                         <MDBBtn floating size='md' className='me-2' style={{ backgroundColor: '#3B5998' }} >
-                            <FontAwesomeIcon icon={faF} />
+                            F
                         </MDBBtn>
 
                         <MDBBtn floating size='md' className='me-2' style={{ backgroundColor: '#dd4b39' }}  >
                             {/* <MDBIcon fab icon='twitter' /> */}
-                            <FontAwesomeIcon icon={faG} />                        </MDBBtn>
+                            G                      </MDBBtn>
                         <MDBBtn floating size='md' className='me-2' style={{ backgroundColor: '#0082ca' }} >
-                            <FontAwesomeIcon icon={faL} />                        </MDBBtn>
+                            Li                        </MDBBtn>
 
                     </div>
 
