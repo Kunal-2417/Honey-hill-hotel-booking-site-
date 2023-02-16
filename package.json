@@ -49,5 +49,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://honey-hill-api.onrender.com"
+  "proxy": "https://honey-hill-api.onrender:8800/api"
 }
