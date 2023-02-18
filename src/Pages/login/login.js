@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import "./login.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { MDBContainer, MDBCol, MDBRow, MDBBtn,  MDBInput } from 'mdb-react-ui-kit';
 // import { faF, faG, faL,  } from '@fortawesome/free-solid-svg-icons';
