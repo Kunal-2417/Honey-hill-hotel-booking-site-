@@ -10,7 +10,8 @@ const useFetch = (url) => {
             setLoading(true);
 
             try {
-                const res =await axios.get(url)
+                const res = await axios.get(url, { mode: 'cors' })
+                // mode: 'cors'
                 setData(res.data)
             } catch (error) {
                 setError(error)

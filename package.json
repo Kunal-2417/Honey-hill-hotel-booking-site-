@@ -50,5 +50,5 @@
     ]
   },
   
-  "proxy": "https://honey-hill-api.onrender.com:8800/api"
+  "proxy": "http://honey-hill-api.onrender.com:8800/api"
 }
